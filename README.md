@@ -1,4 +1,5 @@
 # java-2022-03
 
 Студент
-Igor Chernyshov(Игорь Чернышов)
+
+**Igor Chernyshov** (Игорь Чернышов)
