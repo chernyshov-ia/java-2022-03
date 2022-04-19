@@ -13,6 +13,23 @@ public class CustomerService {
             new TreeMap<>(Comparator.comparingLong(Customer::getScores));
 
 
+    public Map.Entry<Customer, String> getSmallest() {
+        //Возможно, чтобы реализовать этот метод, потребуется посмотреть как Map.Entry сделан в jdk
+        Map.Entry<Customer, String> entry = customers.firstEntry();
+        return entry == null ? null :
+                new Node( new Customer( entry.getKey().getId(), entry.getKey().getName(), entry.getKey().getScores()), entry.getValue());
+    }
+
+    public Map.Entry<Customer, String> getNext(Customer customer) {
+        Map.Entry<Customer, String> entry = customers.higherEntry(customer);
+        return entry == null ? null :
+                new Node( new Customer( entry.getKey().getId(), entry.getKey().getName(), entry.getKey().getScores()), entry.getValue());
+    }
+
+    public void add(Customer customer, String data) {
+        customers.put(customer, data);
+    }
+
 
     private static class Node implements Map.Entry<Customer, String> {
         final private Customer key;
@@ -40,20 +57,4 @@ public class CustomerService {
         }
     }
 
-    public Map.Entry<Customer, String> getSmallest() {
-        //Возможно, чтобы реализовать этот метод, потребуется посмотреть как Map.Entry сделан в jdk
-        Map.Entry<Customer, String> entry = customers.firstEntry();
-        return entry == null ? null :
-                new Node( new Customer( entry.getKey().getId(), entry.getKey().getName(), entry.getKey().getScores()), entry.getValue());
-    }
-
-    public Map.Entry<Customer, String> getNext(Customer customer) {
-        Map.Entry<Customer, String> entry = customers.higherEntry(customer);
-        return entry == null ? null :
-                new Node( new Customer( entry.getKey().getId(), entry.getKey().getName(), entry.getKey().getScores()), entry.getValue());
-    }
-
-    public void add(Customer customer, String data) {
-        customers.put(customer, data);
-    }
 }
