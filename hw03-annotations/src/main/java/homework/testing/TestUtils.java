@@ -136,6 +136,12 @@ public class TestUtils {
     }
 
     public static void runTests(Class<?> clazz) {
+        List<TestMethod> tests = getTestMethods(clazz);
+        if (tests.isEmpty()) {
+            showResults(0,0,0);
+            return;
+        }
+
         Constructor<?> constructor = getConstructor(clazz);
         List<Method> before = getAnnotatedMethods(clazz, Before.class);
         List<Method> after = getAnnotatedMethods(clazz, After.class);
@@ -144,7 +150,7 @@ public class TestUtils {
         int succeeded = 0;
 
         try {
-            for (TestMethod test : getTestMethods(clazz)) {
+            for (TestMethod test : tests) {
                 if (runTest(before, after, test, constructor)) {
                     succeeded++;
                 }
