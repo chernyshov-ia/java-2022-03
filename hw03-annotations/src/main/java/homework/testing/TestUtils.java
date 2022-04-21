@@ -138,6 +138,7 @@ public class TestUtils {
     public static void runTests(Class<?> clazz) {
         List<TestMethod> tests = getTestMethods(clazz);
         if (tests.isEmpty()) {
+            System.out.println("For class " + clazz.getSimpleName() + " no tests found");
             showResults(0,0,0);
             return;
         }
