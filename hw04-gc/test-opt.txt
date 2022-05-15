@@ -1,0 +1,165 @@
+
+heap = 256m
+spend msec:1874, sec:1
+
+heap = 266m
+spend msec:1821, sec:1
+
+heap = 276m
+spend msec:1970, sec:1
+
+heap = 286m
+spend msec:1999, sec:1
+
+heap = 296m
+spend msec:1764, sec:1
+
+heap = 306m
+spend msec:1724, sec:1
+
+heap = 316m
+spend msec:1618, sec:1
+
+heap = 326m
+spend msec:1581, sec:1
+
+heap = 336m
+spend msec:1416, sec:1
+
+heap = 346m
+spend msec:1618, sec:1
+
+heap = 356m
+spend msec:1510, sec:1
+
+heap = 366m
+spend msec:1548, sec:1
+
+heap = 376m
+spend msec:1356, sec:1
+
+heap = 386m
+spend msec:1514, sec:1
+
+heap = 396m
+spend msec:1330, sec:1
+
+heap = 406m
+spend msec:1579, sec:1
+
+heap = 416m
+spend msec:1558, sec:1
+
+heap = 426m
+spend msec:1292, sec:1
+
+heap = 436m
+spend msec:1332, sec:1
+
+heap = 446m
+spend msec:1549, sec:1
+
+heap = 456m
+spend msec:1522, sec:1
+
+heap = 466m
+spend msec:1313, sec:1
+
+heap = 476m
+spend msec:1309, sec:1
+
+heap = 486m
+spend msec:1485, sec:1
+
+heap = 496m
+spend msec:1493, sec:1
+
+heap = 550m
+spend msec:1386, sec:1
+
+heap = 600m
+spend msec:1240, sec:1
+
+heap = 650m
+spend msec:1226, sec:1
+
+heap = 700m
+spend msec:1254, sec:1
+
+heap = 750m
+spend msec:1310, sec:1
+
+heap = 800m
+spend msec:1215, sec:1
+
+heap = 850m
+spend msec:1251, sec:1
+
+heap = 900m
+spend msec:1240, sec:1
+
+heap = 950m
+spend msec:1306, sec:1
+
+heap = 1000m
+spend msec:1327, sec:1
+
+heap = 1050m
+spend msec:1346, sec:1
+
+heap = 1100m
+spend msec:1344, sec:1
+
+heap = 1150m
+spend msec:1387, sec:1
+
+heap = 1200m
+spend msec:1302, sec:1
+
+heap = 1250m
+spend msec:1321, sec:1
+
+heap = 1300m
+spend msec:1327, sec:1
+
+heap = 1350m
+spend msec:1360, sec:1
+
+heap = 1400m
+spend msec:1365, sec:1
+
+heap = 1450m
+spend msec:1347, sec:1
+
+heap = 1500m
+spend msec:1353, sec:1
+
+heap = 1550m
+spend msec:1365, sec:1
+
+heap = 1600m
+spend msec:1336, sec:1
+
+heap = 1650m
+spend msec:1377, sec:1
+
+heap = 1700m
+spend msec:1360, sec:1
+
+heap = 1750m
+spend msec:1351, sec:1
+
+heap = 1800m
+spend msec:1365, sec:1
+
+heap = 1850m
+spend msec:1345, sec:1
+
+heap = 1900m
+spend msec:1342, sec:1
+
+heap = 1950m
+spend msec:1357, sec:1
+
+heap = 2000m
+spend msec:1408, sec:1
