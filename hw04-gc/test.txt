@@ -1,0 +1,164 @@
+
+heap = 256m
+
+heap = 266m
+spend msec:14326, sec:14
+
+heap = 276m
+spend msec:12279, sec:12
+
+heap = 286m
+spend msec:11060, sec:11
+
+heap = 296m
+spend msec:11107, sec:11
+
+heap = 306m
+spend msec:10891, sec:10
+
+heap = 316m
+spend msec:10737, sec:10
+
+heap = 326m
+spend msec:11390, sec:11
+
+heap = 336m
+spend msec:10870, sec:10
+
+heap = 346m
+spend msec:10510, sec:10
+
+heap = 356m
+spend msec:10182, sec:10
+
+heap = 366m
+spend msec:10160, sec:10
+
+heap = 376m
+spend msec:10183, sec:10
+
+heap = 386m
+spend msec:9770, sec:9
+
+heap = 396m
+spend msec:9846, sec:9
+
+heap = 406m
+spend msec:9779, sec:9
+
+heap = 416m
+spend msec:10050, sec:10
+
+heap = 426m
+spend msec:9918, sec:9
+
+heap = 436m
+spend msec:9860, sec:9
+
+heap = 446m
+spend msec:9668, sec:9
+
+heap = 456m
+spend msec:9636, sec:9
+
+heap = 466m
+spend msec:9397, sec:9
+
+heap = 476m
+spend msec:9407, sec:9
+
+heap = 486m
+spend msec:9311, sec:9
+
+heap = 496m
+spend msec:9561, sec:9
+
+heap = 550m
+spend msec:9412, sec:9
+
+heap = 600m
+spend msec:9208, sec:9
+
+heap = 650m
+spend msec:9287, sec:9
+
+heap = 700m
+spend msec:9514, sec:9
+
+heap = 750m
+spend msec:9054, sec:9
+
+heap = 800m
+spend msec:9007, sec:9
+
+heap = 850m
+spend msec:9058, sec:9
+
+heap = 900m
+spend msec:8990, sec:8
+
+heap = 950m
+spend msec:8776, sec:8
+
+heap = 1000m
+spend msec:8849, sec:8
+
+heap = 1050m
+spend msec:8850, sec:8
+
+heap = 1100m
+spend msec:8758, sec:8
+
+heap = 1150m
+spend msec:8860, sec:8
+
+heap = 1200m
+spend msec:8916, sec:8
+
+heap = 1250m
+spend msec:8723, sec:8
+
+heap = 1300m
+spend msec:8695, sec:8
+
+heap = 1350m
+spend msec:8717, sec:8
+
+heap = 1400m
+spend msec:8700, sec:8
+
+heap = 1450m
+spend msec:8630, sec:8
+
+heap = 1500m
+spend msec:8615, sec:8
+
+heap = 1550m
+spend msec:8621, sec:8
+
+heap = 1600m
+spend msec:8490, sec:8
+
+heap = 1650m
+spend msec:8599, sec:8
+
+heap = 1700m
+spend msec:7914, sec:7
+
+heap = 1750m
+spend msec:8024, sec:8
+
+heap = 1800m
+spend msec:8573, sec:8
+
+heap = 1850m
+spend msec:8171, sec:8
+
+heap = 1900m
+spend msec:8316, sec:8
+
+heap = 1950m
+spend msec:8310, sec:8
+
+heap = 2000m
+spend msec:8377, sec:8
