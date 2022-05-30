@@ -12,7 +12,7 @@ public class BanknoteStack {
         this.banknotes = new HashMap<>();
     }
 
-    public void Add(Banknote banknote, int quantity) {
+    public void add(Banknote banknote, int quantity) {
         banknotes.put(banknote, banknotes.getOrDefault(banknote, 0));
     }
 

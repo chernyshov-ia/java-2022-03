@@ -1,5 +1,7 @@
 package atm;
 
+import java.util.Optional;
+
 public interface ATM {
     /**
      * Returns the amount of the remaining funds
@@ -11,7 +13,7 @@ public interface ATM {
     /**
      * Аccept banknotes of different denominations
      */
-    void accept(Banknote banknote);
+    boolean accept(Banknote banknote);
 
     /**
      * Issues the requested amount with a minimum number of
@@ -19,5 +21,5 @@ public interface ATM {
      *
      * @return List of banknotes
      */
-    BanknoteStack issue(int amount);
+    Optional<BanknoteStack> issue(int amount);
 }

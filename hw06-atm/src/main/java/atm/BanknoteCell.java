@@ -1,6 +1,8 @@
 package atm;
 
 public interface BanknoteCell {
+    Banknote getBanknote();
+
     int getValue();
 
     int getQuantity();
