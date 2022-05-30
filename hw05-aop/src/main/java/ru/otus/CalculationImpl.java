@@ -14,6 +14,7 @@ public class CalculationImpl implements Calculation {
         System.out.println("calculation3(" + param1 + ", " +  param2 + ")");
     }
 
+    @Log
     public void calculation(int param1, int param2, String param3) {
         System.out.println("calculation4(" + param1 + ", " + param2 + ", \"" + param3 +"\")");
     }
