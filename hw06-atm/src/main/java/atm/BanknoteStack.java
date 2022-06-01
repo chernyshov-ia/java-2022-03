@@ -1,19 +1,16 @@
 package atm;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class BanknoteStack {
-    private Map<Banknote, Integer> banknotes;
+    final private Map<Banknote, Integer> banknotes;
 
     public BanknoteStack() {
         this.banknotes = new HashMap<>();
     }
 
     public void add(Banknote banknote, int quantity) {
-        banknotes.put(banknote, banknotes.getOrDefault(banknote, 0));
+        banknotes.put(banknote, banknotes.getOrDefault(banknote, 0) + quantity);
     }
 
     public int getTotalAmount() {
@@ -30,5 +27,14 @@ public class BanknoteStack {
 
     public Set<Banknote> getBanknotes() {
         return Collections.unmodifiableSet(banknotes.keySet());
+    }
+
+    @Override
+    public String toString() {
+        var sj = new StringJoiner(",","[","]");
+        for (var entry : banknotes.entrySet()) {
+           sj.add("{" + entry.getKey().getValue() + " => " + entry.getValue() + "шт}");
+        }
+        return "Пачка[" + sj + ']';
     }
 }

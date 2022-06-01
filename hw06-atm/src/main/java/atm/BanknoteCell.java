@@ -10,4 +10,6 @@ public interface BanknoteCell {
     void accept(int quantity);
 
     boolean issue(int quantity);
+
+    String getDescription();
 }
