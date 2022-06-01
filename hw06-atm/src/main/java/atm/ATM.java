@@ -22,4 +22,6 @@ public interface ATM {
      * @return List of banknotes
      */
     Optional<BanknoteStack> issue(int amount);
+
+    String getDescription();
 }
