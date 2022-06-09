@@ -7,8 +7,10 @@ import ru.otus.model.ObjectForMessage;
 import ru.otus.processor.LoggerProcessor;
 import ru.otus.processor.ProcessorConcatFields;
 import ru.otus.processor.ProcessorUpperField10;
+import ru.otus.processor.homework.ProcessorEvenSecondThrow;
 import ru.otus.processor.homework.ProcessorExchange11And12Fields;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class HomeWork {
@@ -34,9 +36,10 @@ public class HomeWork {
 
         var processors = List.of(new ProcessorConcatFields(),
                 new LoggerProcessor(new ProcessorUpperField10()),
-                new LoggerProcessor(new ProcessorExchange11And12Fields()));
+                new LoggerProcessor(new ProcessorExchange11And12Fields()),
+                new ProcessorEvenSecondThrow(LocalDateTime::now));
 
-        var complexProcessor = new ComplexProcessor(processors, ex -> {});
+        var complexProcessor = new ComplexProcessor(processors, Exception::printStackTrace );
         var listenerPrinter = new ListenerPrinterConsole();
         complexProcessor.addListener(listenerPrinter);
 
