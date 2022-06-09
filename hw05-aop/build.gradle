@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow'
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+
+shadowJar {
+    archiveBaseName.set('aop')
+    archiveVersion.set('')
+    archiveClassifier.set('')
+    manifest {
+        attributes 'Main-Class': 'ru.otus.Example'
+    }
+}
+
+tasks.build.dependsOn tasks.shadowJar
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-parameters'
+}
