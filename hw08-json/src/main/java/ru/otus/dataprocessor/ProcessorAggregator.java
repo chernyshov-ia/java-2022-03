@@ -5,6 +5,7 @@ import ru.otus.model.Measurement;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 
 import static java.util.stream.Collectors.groupingBy;
@@ -18,10 +19,7 @@ public class ProcessorAggregator implements Processor {
         //группирует выходящий список по name, при этом суммирует поля value
 
         return data.stream()
-                .collect(groupingBy(Measurement::getName,
-                        summarizingDouble(Measurement::getValue)))
-                .entrySet().stream()
-                .collect(toMap(Map.Entry::getKey, e -> e.getValue().getSum(),
-                        (a,b) -> a + b, TreeMap::new));
+                .collect(groupingBy(Measurement::getName,TreeMap::new,
+                        Collectors.summingDouble(Measurement::getValue)));
     }
 }
