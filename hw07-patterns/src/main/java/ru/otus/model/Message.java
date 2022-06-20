@@ -113,8 +113,16 @@ public class Message {
     }
 
     public Builder toBuilder() {
+
+        ObjectForMessage f13 = null;
+        if (field13 != null) {
+            f13 = new ObjectForMessage();
+            if (field13.getData() != null) {
+                f13.setData(new ArrayList<>(field13.getData()));
+            }
+        }
         return new Builder(id, field1, field2, field3, field4,
-                field5, field6, field7, field8, field9, field10, field11, field12, field13);
+                field5, field6, field7, field8, field9, field10, field11, field12, f13);
     }
 
     @Override
@@ -244,15 +252,8 @@ public class Message {
         }
 
         public Message build() {
-            ObjectForMessage f13 = null;
-            if (field13 != null) {
-                f13 = new ObjectForMessage();
-                if (field13.getData() != null) {
-                    f13.setData(new ArrayList<String>(field13.getData()));
-                }
-            }
             return new Message(id, field1, field2, field3, field4, field5, field6,
-                    field7, field8, field9, field10, field11, field12, f13);
+                    field7, field8, field9, field10, field11, field12, field13);
         }
     }
 }
