@@ -14,10 +14,10 @@ dependencies {
 dependencies {
     dependencies {
         implementation project(':hw09-orm:demo')
-
         implementation 'ch.qos.logback:logback-classic'
         implementation 'org.flywaydb:flyway-core'
         implementation 'org.postgresql:postgresql'
+        implementation 'com.google.guava:guava'
     }
 }
 

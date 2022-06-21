@@ -40,6 +40,8 @@ allprojects {
         resolutionStrategy {
             force("org.codehaus.jackson:jackson-core-asl:1.8.8")
             force("org.codehaus.jackson:jackson-mapper-asl:1.8.3")
+            force("org.checkerframework:checker-qual:3.5.0")
+
         }
     }
 }
