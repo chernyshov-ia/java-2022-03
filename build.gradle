@@ -29,11 +29,16 @@ allprojects {
             dependency "org.openjdk.jmh:jmh-core:${Versions.jmh}"
             dependency "org.openjdk.jmh:jmh-generator-annprocess:${Versions.jmh}"
             dependency("org.ow2.asm:asm-commons:${Versions.asm}")
+            dependency("com.google.code.gson:gson:${Versions.gson}")
         }
     }
     configurations.all {
         resolutionStrategy {
             failOnVersionConflict()
+        }
+        resolutionStrategy {
+            force("org.codehaus.jackson:jackson-core-asl:1.8.8")
+            force("org.codehaus.jackson:jackson-mapper-asl:1.8.3")
         }
     }
 }
