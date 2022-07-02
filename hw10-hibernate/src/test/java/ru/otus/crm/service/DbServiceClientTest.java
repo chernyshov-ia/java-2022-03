@@ -16,6 +16,7 @@ class DbServiceClientTest extends AbstractHibernateTest {
         //given
         var client = new Client("Ivan");
 
+
         //when
         var savedClient = dbServiceClient.saveClient(client);
         System.out.println(savedClient);
