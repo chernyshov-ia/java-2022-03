@@ -20,8 +20,11 @@ test {
         events "passed", "skipped", "failed"
     }
 }
+
+/*
 tasks.withType(JavaCompile) {
     options.with {
         encoding = 'UTF-8'
     }
 }
+*/
