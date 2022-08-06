@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Пользователи</title>
+    <script>
+        function addClientToTable(client) {
+            const tab = document.getElementById('clientsBody');
+
+            let newRow = tab.insertRow(tab.rows.length);
+
+            newRow.insertCell(0).appendChild(document.createTextNode(client.id));
+            newRow.insertCell(1).appendChild(document.createTextNode(client.name));
+            newRow.insertCell(2).appendChild(document.createTextNode(client.address));
+            newRow.insertCell(3).appendChild(document.createTextNode(client.phone));
+        }
+
+        function createClient() {
+            const clientNameTextBox = document.getElementById('clientNameTextBox');
+            const clientAddressTextBox = document.getElementById('clientAddressTextBox');
+            const clientPhoneTextBox = document.getElementById('clientPhoneTextBox');
+
+            const name = clientNameTextBox.value;
+            const address = clientAddressTextBox.value;
+            const phone = clientPhoneTextBox.value;
+
+            if (name == "") {
+                alert("Укажите имя!")
+                exit;
+            }
+
+            if (address == "") {
+                alert("Укажите адрес!")
+                exit;
+            }
+
+            if (phone == "" ) {
+                alert("Укажите телефон!")
+                exit;
+            }
+
+
+            let req = { name: name, address: address, phone: phone };
+
+            fetch("/api/client", {
+                method: 'post',
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                },
+                body: JSON.stringify(req)
+            })
+                .then(response => response.json())
+                .then(function (data) {
+                    console.log('Request succeeded with JSON response', data);
+                    addClientToTable(data);
+
+                })
+                .catch(function (error) {
+                    console.log('Request failed', error);
+                });
+        }
+    </script>
+</head>
+
+<body>
+
+<h3>Здравствуйте, username!</h3>
+
+<h4>Добавить нового клиента</h4>
+
+
+<input type="text" id="clientNameTextBox" value="Имя" placeholder="Введите имя клиента">
+<input type="text" id="clientAddressTextBox" value="Адрес" placeholder="Введите адрес клиента">
+<input type="text" id="clientPhoneTextBox" value="Телефон" placeholder="Введите телефон клиента">
+
+<button onclick="createClient()">Добавить</button>
+
+<table style="width: 400px">
+    <thead>
+    <tr>
+        <td style="width: 50px">Id</td>
+        <td style="width: 150px">Имя</td>
+        <td style="width: 100px">Адрес</td>
+        <td style="width: 100px">Телефон</td>
+    </tr>
+    </thead>
+    <tbody id="clientsBody">
+        <tr th:each="item: ${clients}">
+            <td th:text="${item.getId()}">id</td>
+            <td th:text="${item.getName()}">name</td>
+            <td th:text="${item.getAddress()}">address</td>
+            <td th:text="${item.getPhone()}">phone</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
