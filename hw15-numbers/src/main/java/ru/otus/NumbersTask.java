@@ -5,19 +5,18 @@ import org.slf4j.LoggerFactory;
 
 public class NumbersTask implements Runnable {
         private static final Logger logger = LoggerFactory.getLogger(NumbersTask.class);
-        public static final Object LOCK = new Object();
         public static final int MAX_VALUE = 10;
         public static String lastThreadName = "";
 
         private int number = 1;
         private int delta = 1;
 
-        private void sleep() throws InterruptedException {
+        private static void sleep() throws InterruptedException {
             Thread.sleep(200);
         }
 
         private void doWork() {
-            logger.info(String.valueOf(number));
+            logger.info("Number = {}", number);
 
             if (delta > 0 && number == MAX_VALUE) {
                 delta = -1;
@@ -27,23 +26,25 @@ public class NumbersTask implements Runnable {
             number = number + delta;
         }
 
-        @Override
-        public void run() {
+        public static synchronized void doRun(NumbersTask task) {
             try {
-                synchronized (LOCK) {
-                    while (!Thread.currentThread().isInterrupted()) {
-                        while (lastThreadName.equals(Thread.currentThread().getName())) {
-                            LOCK.wait();
-                        }
-                        doWork();
-                        lastThreadName = Thread.currentThread().getName();
-                        sleep();
-                        LOCK.notifyAll();
+                while (!Thread.currentThread().isInterrupted()) {
+                    while (lastThreadName.equals(Thread.currentThread().getName())) {
+                        NumbersTask.class.wait();
                     }
+                    task.doWork();
+                    lastThreadName = Thread.currentThread().getName();
+                    sleep();
+                    NumbersTask.class.notifyAll();
                 }
             } catch (InterruptedException e) {
-                logger.info("Interrupted...");
+                logger.info("{}", "Interrupted...");
                 Thread.currentThread().interrupt();
             }
+        }
+
+        @Override
+        public void run() {
+            doRun(this);
         }
 }

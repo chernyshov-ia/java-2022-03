@@ -17,26 +17,26 @@ public class NumbersHomework {
 
         NumbersTask.lastThreadName = thread2.getName();
 
-        thread1.start();
         thread2.start();
+        thread1.start();
 
-        logger.info("Starting threads...");
+        logger.info("{}", "Starting threads...");
 
-        logger.info("Running 10 seconds...");
+        logger.info("{}", "Running 10 seconds...");
 
         Thread.sleep(10000);
 
-        logger.info("Interrupting threads...");
+        logger.info("{}", "Interrupting threads...");
 
         thread1.interrupt();
         thread2.interrupt();
 
-        logger.info("Waiting stopping threads...");
+        logger.info("{}", "Waiting stopping threads...");
 
         thread1.join();
         thread2.join();
 
-        logger.info("Threads stopped...");
+        logger.info("{}", "Threads stopped...");
     }
 
 
