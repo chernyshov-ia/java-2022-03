@@ -25,4 +25,16 @@ public class SensorData {
     public Double getValue() {
         return value;
     }
+
+/*
+    @Override
+    public String toString() {
+        return "SensorData{" +
+                "measurementTime=" + measurementTime +
+                ", room='" + room + '\'' +
+                ", value=" + value +
+                '}';
+    }
+ */
+
 }

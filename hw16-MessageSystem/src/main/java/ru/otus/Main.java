@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     private static final String ALL_ROOMS_BINDING = "*";
     private static final String ROOM_NAME_BINDING = "Комната: 4";
-    private static final int BUFFER_SIZE = 15;
+    private static final int BUFFER_SIZE = 10;
     private static final int SENSORS_COUNT = 4;
 
     private static final int SENSORS_DATA_QUEUE_CAPACITY = 1000;
