@@ -4,7 +4,7 @@ public interface Versions {
     String asm = "9.2";
     String glassfishJson = "2.0.1";
 
-    String lombok = "1.18.22";
+    String lombok = "1.18.24";
     String gson = "2.8.9";
 
     String mongodb = "4.4.1";
